@@ -8,7 +8,7 @@ var started = false;
 
 var level = 0;
 
-$(".btn").on("click", function() {
+$(".btn").click("click", function() {
     var userChosenColor = $(this).attr("id");
     userClickedPattern.push(userChosenColor);
     
@@ -79,7 +79,7 @@ function animatePress(currentColor) {
 
 }
 
-$(document).keypress(function() {
+$(document).click(function() {
     if (!started) {
         $("h1").text("Level " + level);
         nextSequence();
